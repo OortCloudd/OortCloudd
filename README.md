@@ -2,18 +2,18 @@
 
 Research Engineer · Machine learning for ophthalmology · Paris
 
-I build ML experiments and the systems around them: getting data out of ophthalmic devices, turning it into usable datasets, and making training runs measurable and reproducible. I work at Quinze-Vingts Hospital in Paris, across corneal imaging, statistical modeling, and research infrastructure.
+I built and operate **CorneaForge / OphtaFlow AI**, an on-premise ophthalmic data and research platform at Quinze-Vingts Hospital in Paris. My work spans deployed device pipelines and model serving, scientific image processing, and machine learning experiments.
 
-My background is in econometrics and statistics. These days, I spend a lot of time with OCT images, PyTorch, and the question of whether an experiment actually supports the conclusion we want to draw from it.
+My background is in econometrics and statistics. I work from the original device measurements through to the model and the systems that run it.
 
 [Writing & projects](https://nassimlouissi.com) · [Publications](#selected-publications)
 
-## What I’m working on
+## Systems, experiments, and results
 
-- **Representation learning for anterior-segment OCT.** Adapting and comparing masked reconstruction, predictive representation learning, and diffusion-based pretraining. My focus includes crop design, representation diagnostics, and evaluation that keeps patients separated across data splits.
-- **Corvis video analysis.** Extracting image-supported corneal regions and studying experimental video classification. The current prototype combines classical segmentation with a compact neural classifier, inspectable intermediate results, and patient-grouped development. Independent performance evaluation remains open.
-- **The data underneath the models.** Building CorneaForge and the OphtaFlow AI interface for ophthalmic device ingestion, corneal geometry, annotation, and research datasets. I care about preserving the link between a derived measurement and its source.
-- **Making limited compute useful.** Implementing and profiling training on two NVIDIA L40S GPUs. Recent JEPA work reduced coordinator stalls by overlapping input preparation, with numerical parity and resume checks to verify the execution change.
+- **A platform in operation.** CorneaForge ingests MS-39 and Corvis data, processes OCT images, computes corneal features, and renders examinations. OphtaFlow AI connects examination review, annotation, native videos, and existing model predictions. The stack uses FastAPI, PostgreSQL, MinIO, and dedicated systemd workers. [Architecture and deployment](https://nassimlouissi.com/blog/from-device-export-to-research-system/).
+- **AS-OCT representation learning.** Five pretraining recipes share an index of **3,427,130 B-scans** and a common encoder initialization. Recorded feature spectra show concentration in the patch-limited reconstruction arms and more dispersed variation in JEPA. [Results, figures, and measurement definitions](https://nassimlouissi.com/blog/reading-pretraining-diagnostics/).
+- **Two-GPU training performance.** I implemented and profiled JEPA on two NVIDIA L40S GPUs. Overlapping coordinator input preparation reduced update time from **10.246 to 8.787 seconds (14.2%)** in a matched unprofiled comparison. Input, gradient, optimizer-state, and resume checks passed without changing the training recipe.
+- **Corvis video research.** Classical corneal region segmentation, motion analysis, and an experimental neural classifier, supported by synchronized inspection and human-review tools. The classifier produces uncalibrated exploratory scores; independent performance evaluation remains open.
 
 ## Open source
 
@@ -40,4 +40,4 @@ My everyday tools include Python, PyTorch, NumPy/SciPy, CatBoost, PostgreSQL, an
 
 I write about the engineering behind this work at [nassimlouissi.com](https://nassimlouissi.com).
 
-Recent writing: [Reading the geometry of AS-OCT pretraining](https://nassimlouissi.com/blog/reading-pretraining-diagnostics/) — recorded representation diagnostics and the profiling behind a two-GPU training run. You can also [watch ML Training Monitor in 48 seconds](https://nassimlouissi.com/#monitor-demo), using synthetic demonstration metrics.
+You can also [watch ML Training Monitor in 48 seconds](https://nassimlouissi.com/#monitor-demo). That promotional video uses labeled synthetic telemetry; the research figures linked above contain real aggregate measurements.
