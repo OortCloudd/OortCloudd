@@ -26,10 +26,6 @@ It helps an agent connect existing training logs, inspect GPU activity, capture 
 
 A compact experiment in fusing an OCT reconstruction pipeline into a CUDA kernel with cuFFTDx. It explores how keeping intermediate values on the GPU chip changes the cost of a pipeline, with a reference implementation and benchmark.
 
-### [nodepilot](https://github.com/OortCloudd/nodepilot)
-
-A lightweight Linux queue for long-running compute jobs on one machine. It combines dependencies, NUMA-aware placement, memory limits through cgroups, and persistent queue state.
-
 ## How I work
 
 Follow a result back to its data. Make the comparison fair. Measure where time goes. Check what changed after an optimization.
