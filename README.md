@@ -39,3 +39,5 @@ My everyday tools include Python, PyTorch, NumPy/SciPy, CatBoost, PostgreSQL, an
 - **Co-author** — [CorvisST biomechanical indices in the diagnosis of corneal stromal and endothelial disorders: an artificial intelligence-based comparative study](https://doi.org/10.1136/bjo-2025-327855). *British Journal of Ophthalmology*, published online in 2025.
 
 I write about the engineering behind this work at [nassimlouissi.com](https://nassimlouissi.com).
+
+Recent writing: [Reading the geometry of AS-OCT pretraining](https://nassimlouissi.com/blog/reading-pretraining-diagnostics/) — recorded representation diagnostics and the profiling behind a two-GPU training run. You can also [watch ML Training Monitor in 48 seconds](https://nassimlouissi.com/#monitor-demo), using synthetic demonstration metrics.
