@@ -11,8 +11,9 @@ My background is in econometrics and statistics. These days, I spend a lot of ti
 ## What I’m working on
 
 - **Representation learning for anterior-segment OCT.** Adapting and comparing masked reconstruction, predictive representation learning, and diffusion-based pretraining. My focus includes crop design, representation diagnostics, and evaluation that keeps patients separated across data splits.
-- **The data underneath the models.** Building CorneaForge, an on-premise platform for ophthalmic device ingestion, corneal geometry and feature computation, annotation, and research datasets. I care about preserving the link between a derived measurement and its source.
-- **Making limited compute useful.** Profiling training on two NVIDIA L40S GPUs, investigating input and memory bottlenecks, and checking numerical behavior before accepting an optimization.
+- **Corvis video analysis.** Extracting image-supported corneal regions and studying experimental video classification. The current prototype combines classical segmentation with a compact neural classifier, inspectable intermediate results, and patient-grouped development. Independent performance evaluation remains open.
+- **The data underneath the models.** Building CorneaForge and the OphtaFlow AI interface for ophthalmic device ingestion, corneal geometry, annotation, and research datasets. I care about preserving the link between a derived measurement and its source.
+- **Making limited compute useful.** Implementing and profiling training on two NVIDIA L40S GPUs. Recent JEPA work reduced coordinator stalls by overlapping input preparation, with numerical parity and resume checks to verify the execution change.
 
 ## Open source
 
